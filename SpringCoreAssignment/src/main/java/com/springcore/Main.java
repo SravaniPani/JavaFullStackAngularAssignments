@@ -1,0 +1,18 @@
+package com.springcore;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("NewFile.xml");
+		Customer customer=(Customer) context.getBean("customer");
+		customer.show();
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
