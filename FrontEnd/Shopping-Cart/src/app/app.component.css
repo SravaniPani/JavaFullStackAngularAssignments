@@ -1,0 +1,117 @@
+li {
+  float: left;
+  display: block;
+  padding: 10px 10px;
+  /* text-decoration:underline; */
+  overflow: hidden;
+  /* background-color: rgb(14, 14, 243); */
+  height: auto;
+}
+
+li:hover {
+
+  /* background-color:rgb(44, 44, 162); */
+  color: rgb(6, 139, 216);
+  text-align: center;
+  padding: 15px;
+  height: auto;
+}
+
+nav {
+  /* background-color: rgb(138, 138, 221); */
+  height: 100px;
+}
+
+.a1 {
+  margin-left: 20px;
+}
+
+
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart_icon i {
+  font-size: 24px;
+  color: black
+}
+
+.cart_icon:focus {
+  outline: none;
+  border: none;
+}
+
+.cart_value {
+  position: absolute;
+  top: -16px;
+  right: -32px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 4px 10px;
+  font-weight: 800;
+  font-size: 16px;
+
+
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ff0c9e;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: #00c954;
+  color: white;
+}
+
+footer {
+  background: black;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: aqua;
+}
+
+.form-control {
+  border-radius: 3px;
+  width: 500px;
+  margin-left: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  right: 49%;
+  left: 65%;
+  top: 40px;
+  color:black;
+}
+
+
+

@@ -1,0 +1,68 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar- bg-dark">
+    <a href="#" class="navbar-brand a1"><i><b>E Shopping Zone</b></i></a>
+    <img src="https://cdn-icons-png.flaticon.com/128/3176/3176363.png" width="80px" height="70px">
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
+      <li class="nav-item">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)"
+          placeholder="serach products">
+      </li>
+      <span class="fas fa-search search-icon"></span>
+  
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="product-list">Admin Board</a>
+      </li>
+      
+      <!-- <li class="nav-item user">
+        <a href="/user" class="nav-link" *ngIf="isLoggedIn && !showAdminBoard" routerLink="user">User</a>
+      </li> -->
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">Profile</a>
+        <!-- {{ username }} -->
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <button routerLink="cart" style="margin-left: 20px;margin-top: 25px;" class="btn btn-dark"
+          *ngIf="isLoggedIn && !showAdminBoard">
+          <i style="font-size:30px; " *ngIf="isLoggedIn  && !showAdminBoard" class="fas fa-cart-plus"></i>
+          <div style="font-size:10px; " class="badge bg-danger">{{totalItem}}</div>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<footer>
+  <div class="text-center p-3" style="background-color:black; color:red;"> ©2023 Copyright:
+    <a href="/about" class="nav-link" routerLink="about"><u>About</u></a>
+    <a href="/termsandconditions" class="nav-link" routerLink="termsandconditions"><u>Terms&Conditions</u></a>
+  </div>
+
+  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>&nbsp;
+  <a href="https://twitter.com/" class="fa fa-twitter"></a>&nbsp;
+  <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>&nbsp;
+  <a href="https://www.instagram.com/accounts/login/" class="fa fa-instagram"></a>
+
+</footer>
